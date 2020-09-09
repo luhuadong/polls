@@ -93,3 +93,15 @@ python manage.py runserver
 python manage.py startapp polls
 ```
 
+
+
+## 数据库
+
+### 创建数据库
+
+```sql
+CREATE DATABASE IF NOT EXISTS polls DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+```
+
+创建后，通过 `use polls;` 切换数据库。
+
