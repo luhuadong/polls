@@ -105,3 +105,45 @@ CREATE DATABASE IF NOT EXISTS polls DEFAULT CHARSET utf8 COLLATE utf8_general_ci
 
 创建后，通过 `use polls;` 切换数据库。
 
+
+
+### 安装 mysqlclient
+
+在 Ubuntu 中安装依赖
+
+```shell
+sudo apt-get install libmysqlclient-dev
+```
+
+再安装 mysqlclient
+
+```shell
+pip3 install mysqlclient
+```
+
+执行迁移
+
+```shell
+python manage.py migrate
+```
+
+
+
+### 安装 pymysql
+
+```shell
+pip install PyMySQL
+```
+
+如果使用 pymysql，则需要在 `__init__.py` 文件中添加：
+
+```shell
+import pymysql
+
+pymysql.install_as_MySQLdb()
+```
+
+
+
+提示：mysqlclient 的性能要好于 pymsql
+
